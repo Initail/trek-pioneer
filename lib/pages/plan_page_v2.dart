@@ -265,7 +265,7 @@ class _PlanPageState extends State<PlanPage> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(progressText, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white70)),
-              Text(ratio, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white50)),
+              Text(ratio, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.5))),
             ],
           ),
           const SizedBox(height: 16),
@@ -306,7 +306,7 @@ class _PlanPageState extends State<PlanPage> {
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.05),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white5),
+        border: Border.all(color: Colors.white.withOpacity(0.05)),
       ),
       child: Row(
         children: [
@@ -314,7 +314,7 @@ class _PlanPageState extends State<PlanPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, color: Colors.white50)),
+                Text(title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold, color: Colors.white.withOpacity(0.5))),
                 const SizedBox(height: 4),
                 Text('$duration · $completedDate', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white30)),
               ],
@@ -525,7 +525,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.1),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: Colors.white20),
+        border: Border.all(color: Colors.white.withOpacity(0.2)),
       ),
       child: Row(
         children: [
@@ -537,7 +537,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
                 const SizedBox(height: 4),
                 Text(subtitle, style: const TextStyle(color: Colors.white60, fontSize: 12)),
                 const SizedBox(height: 4),
-                Text(difficulty, style: const TextStyle(color: Colors.white50, fontSize: 12)),
+                Text(difficulty, style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
               ],
             ),
           ),
@@ -567,7 +567,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white20),
+            border: Border.all(color: Colors.white.withOpacity(0.2)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -583,7 +583,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         const Text('2026 年 9 月 15 日', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
-                        Text('距离今天还有 158 天', style: const TextStyle(color: Colors.white50, fontSize: 12)),
+                        Text('距离今天还有 158 天', style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
                       ],
                     ),
                   ),
@@ -605,7 +605,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white20),
+            border: Border.all(color: Colors.white.withOpacity(0.2)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -624,7 +624,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
                   _buildDaySelector('日', false),
                 ],
               ),
-              Text('建议每周至少训练 5 天', style: TextStyle(color: Colors.white50, fontSize: 12)),
+              Text('建议每周至少训练 5 天', style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12)),
             ],
           ),
         ),
@@ -637,7 +637,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white20),
+            border: Border.all(color: Colors.white.withOpacity(0.2)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -715,7 +715,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white20),
+            border: Border.all(color: Colors.white.withOpacity(0.2)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -741,7 +741,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white20),
+            border: Border.all(color: Colors.white.withOpacity(0.2)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -770,7 +770,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white20),
+            border: Border.all(color: Colors.white.withOpacity(0.2)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -797,7 +797,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
       decoration: BoxDecoration(
         color: isSelected ? const Color(0xFFFFD700).withOpacity(0.2) : Colors.transparent,
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: isSelected ? const Color(0xFFFFD700) : Colors.white20),
+        border: Border.all(color: isSelected ? const Color(0xFFFFD700) : Colors.white.withOpacity(0.2)),
       ),
       child: Row(
         children: [
@@ -892,7 +892,7 @@ class _CreatePlanWizardState extends State<CreatePlanWizard> {
           decoration: BoxDecoration(
             color: Colors.white.withOpacity(0.1),
             borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: Colors.white20),
+            border: Border.all(color: Colors.white.withOpacity(0.2)),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

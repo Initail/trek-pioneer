@@ -55,7 +55,7 @@ class _TeamPageV2State extends State<TeamPageV2> {
                       Container(
                         padding: const EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                          color: Colors.white24,
+                          color: Colors.white.withOpacity(0.24),
                           borderRadius: BorderRadius.circular(12),
                         ),
                         child: const Text('🏆', style: TextStyle(fontSize: 28)),
@@ -75,7 +75,7 @@ class _TeamPageV2State extends State<TeamPageV2> {
                             Text(
                               '团队目标 · 3000km',
                               style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                                    color: Colors.white70,
+                                    color: Colors.white.withOpacity(0.7),
                                   ),
                             ),
                           ],
@@ -88,7 +88,7 @@ class _TeamPageV2State extends State<TeamPageV2> {
                     borderRadius: BorderRadius.circular(8),
                     child: LinearProgressIndicator(
                       value: 0.42,
-                      backgroundColor: Colors.white24,
+                      backgroundColor: Colors.white.withOpacity(0.24),
                       valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
                       minHeight: 10,
                     ),
@@ -98,11 +98,11 @@ class _TeamPageV2State extends State<TeamPageV2> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('已完成 1,258km', style: Theme.of(context).textTheme.bodyMedium?.copyWith(color: Colors.white)),
-                      Text('还剩 1,742km', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white70)),
+                      Text('还剩 1,742km', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.7))),
                     ],
                   ),
                   const SizedBox(height: 8),
-                  Text('平均每人每周需完成：43km', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white60)),
+                  Text('平均每人每周需完成：43km', style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.6))),
                   const SizedBox(height: 20),
                   SizedBox(
                     width: double.infinity,
@@ -259,7 +259,7 @@ class _TeamPageV2State extends State<TeamPageV2> {
         decoration: BoxDecoration(
           color: Colors.white.withOpacity(0.1),
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: isMe ? const Color(0xFFFFD700) : Colors.white10),
+          border: Border.all(color: isMe ? const Color(0xFFFFD700) : Colors.white.withOpacity(0.1)),
         ),
         child: Row(
           children: [
@@ -273,8 +273,8 @@ class _TeamPageV2State extends State<TeamPageV2> {
                 errorBuilder: (context, error, stackTrace) => Container(
                   width: 60,
                   height: 60,
-                  color: Colors.white24,
-                  child: const Icon(Icons.person, color: Colors.white70, size: 30),
+                  color: Colors.white.withOpacity(0.24),
+                  child: Icon(Icons.person, color: Colors.white.withOpacity(0.7), size: 30),
                 ),
               ),
             ),
@@ -301,13 +301,13 @@ class _TeamPageV2State extends State<TeamPageV2> {
                     ],
                   ),
                   const SizedBox(height: 4),
-                  Text(role, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white60)),
+                  Text(role, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.6))),
                   const SizedBox(height: 8),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(4),
                     child: LinearProgressIndicator(
                       value: progress,
-                      backgroundColor: Colors.white24,
+                      backgroundColor: Colors.white.withOpacity(0.24),
                       valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFFD700)),
                       minHeight: 6,
                     ),
@@ -316,8 +316,8 @@ class _TeamPageV2State extends State<TeamPageV2> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(distance, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white70)),
-                      Text(status, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white60, fontSize: 12)),
+                      Text(distance, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.7))),
+                      Text(status, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.6), fontSize: 12)),
                     ],
                   ),
                 ],
@@ -328,7 +328,7 @@ class _TeamPageV2State extends State<TeamPageV2> {
             if (onTap != null)
               const Icon(
                 Icons.chevron_right,
-                color: Colors.white30,
+                color: Color(0x33FFD700),
                 size: 24,
               ),
           ],
@@ -351,7 +351,7 @@ class _TeamPageV2State extends State<TeamPageV2> {
       decoration: BoxDecoration(
         color: Colors.white.withOpacity(0.1),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: Colors.white10),
+        border: Border.all(color: Colors.white.withOpacity(0.1)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -367,8 +367,8 @@ class _TeamPageV2State extends State<TeamPageV2> {
                   errorBuilder: (context, error, stackTrace) => Container(
                     width: 40,
                     height: 40,
-                    color: Colors.white24,
-                    child: const Icon(Icons.person, color: Colors.white70, size: 20),
+                    color: Colors.white.withOpacity(0.24),
+                    child: Icon(Icons.person, color: Colors.white.withOpacity(0.7), size: 20),
                   ),
                 ),
               ),
@@ -378,7 +378,7 @@ class _TeamPageV2State extends State<TeamPageV2> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(name, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.bold)),
-                    Text(time, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white50)),
+                    Text(time, style: Theme.of(context).textTheme.bodySmall?.copyWith(color: Colors.white.withOpacity(0.5))),
                   ],
                 ),
               ),
@@ -392,16 +392,16 @@ class _TeamPageV2State extends State<TeamPageV2> {
               IconButton(
                 icon: const Icon(Icons.favorite_border, size: 20),
                 onPressed: () {},
-                color: Colors.white60,
+                color: Colors.white.withOpacity(0.6),
               ),
-              Text('$likes', style: const TextStyle(color: Colors.white60, fontSize: 12)),
+              Text('$likes', style: TextStyle(color: Colors.white.withOpacity(0.6), fontSize: 12)),
               const SizedBox(width: 16),
               IconButton(
                 icon: const Icon(Icons.chat_bubble_outline, size: 20),
                 onPressed: () {},
-                color: Colors.white60,
+                color: Colors.white.withOpacity(0.6),
               ),
-              Text('$comments', style: const TextStyle(color: Colors.white60, fontSize: 12)),
+              Text('$comments', style: TextStyle(color: Colors.white.withOpacity(0.6), fontSize: 12)),
             ],
           ),
         ],
@@ -426,10 +426,10 @@ class TeammateDetailPage extends StatefulWidget {
   const TeammateDetailPage({super.key, required this.teammateName});
 
   @override
-  State<TeamMateDetailPage> createState() => _TeammateDetailPageState();
+  State<TeammateDetailPage> createState() => _TeammateDetailPageState();
 }
 
-class _TeammateDetailPageState extends State<TeamMateDetailPage> {
+class _TeammateDetailPageState extends State<TeammateDetailPage> {
   DateTime _selectedDate = DateTime.now();
 
   @override
@@ -452,7 +452,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.white20),
+                border: Border.all(color: Colors.white.withOpacity(0.2)),
               ),
               child: Column(
                 children: [
@@ -475,7 +475,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
                           ),
                           Text(
                             _getWeekday(_selectedDate),
-                            style: const TextStyle(color: Colors.white60, fontSize: 14),
+                            style: TextStyle(color: Colors.white.withOpacity(0.6), fontSize: 14),
                           ),
                         ],
                       ),
@@ -536,7 +536,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text('西湖环湖徒步', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
-                            Text('2026-04-08', style: TextStyle(color: Colors.white70, fontSize: 14)),
+                            Text('2026-04-08', style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 14)),
                           ],
                         ),
                       ),
@@ -594,7 +594,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.white20),
+                border: Border.all(color: Colors.white.withOpacity(0.2)),
               ),
               child: Column(
                 children: [
@@ -638,26 +638,26 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.white20),
+                border: Border.all(color: Colors.white.withOpacity(0.2)),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text('李四今天的表现太棒了！🎉', style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 16),
-                  const Text('📊 数据亮点：', style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
+                  Text('📊 数据亮点：', style: TextStyle(color: Colors.white.withOpacity(0.7), fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   _buildInsightItem('• 里程比上周平均 +35%'),
                   _buildInsightItem('• 心率控制更稳定'),
                   _buildInsightItem('• 后半程配速保持优秀'),
                   const SizedBox(height: 16),
-                  const Text('💡 建议：', style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
+                  Text('💡 建议：', style: TextStyle(color: Colors.white.withOpacity(0.7), fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   _buildInsightItem('• 注意补充水分'),
                   _buildInsightItem('• 明天建议轻松恢复'),
                   _buildInsightItem('• 可以挑战 20km+ 了'),
                   const SizedBox(height: 16),
-                  const Text('🏅 今日成就：', style: TextStyle(color: Colors.white70, fontWeight: FontWeight.bold)),
+                  Text('🏅 今日成就：', style: TextStyle(color: Colors.white.withOpacity(0.7), fontWeight: FontWeight.bold)),
                   const SizedBox(height: 8),
                   Row(
                     children: [
@@ -703,7 +703,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
                           icon: const Icon(Icons.thumb_up, size: 18),
                           label: const Text('点赞'),
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.white24,
+                            backgroundColor: Colors.white.withOpacity(0.24),
                             padding: const EdgeInsets.symmetric(vertical: 10),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                           ),
@@ -731,7 +731,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.1),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: Colors.white20),
+                border: Border.all(color: Colors.white.withOpacity(0.2)),
               ),
               child: Column(
                 children: [
@@ -749,11 +749,11 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
                   const SizedBox(height: 8),
                   _buildTrendItem('4/8', 18.5, true),
                   const SizedBox(height: 16),
-                  const Divider(color: Colors.white20),
+                  Divider(color: Colors.white.withOpacity(0.2)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text('周总计：91.5km', style: TextStyle(color: Colors.white70)),
+                      Text('周总计：91.5km', style: TextStyle(color: Colors.white.withOpacity(0.7))),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                         decoration: BoxDecoration(
@@ -786,7 +786,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: ['一', '二', '三', '四', '五', '六', '日']
-                .map((d) => SizedBox(width: 30, child: Text(d, textAlign: TextAlign.center, style: const TextStyle(color: Colors.white50, fontSize: 12))))
+                .map((d) => SizedBox(width: 30, child: Text(d, textAlign: TextAlign.center, style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12))))
                 .toList(),
           ),
           const SizedBox(height: 8),
@@ -839,14 +839,14 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
       width: 30,
       height: 30,
       decoration: BoxDecoration(
-        color: isSelected ? const Color(0xFFFFD700) : (hasActivity ? Colors.white20 : Colors.transparent),
+        color: isSelected ? const Color(0xFFFFD700) : (hasActivity ? Colors.white.withOpacity(0.2) : Colors.transparent),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Center(
         child: Text(
           day,
           style: TextStyle(
-            color: isSelected ? const Color(0xFF1A1A2E) : Colors.white70,
+            color: isSelected ? const Color(0xFF1A1A2E) : Colors.white.withOpacity(0.7),
             fontSize: 12,
             fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
           ),
@@ -861,7 +861,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
         Text(icon, style: const TextStyle(fontSize: 24)),
         const SizedBox(height: 4),
         Text(value, style: const TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold)),
-        Text(label, style: const TextStyle(color: Colors.white60, fontSize: 12)),
+        Text(label, style: TextStyle(color: Colors.white.withOpacity(0.6), fontSize: 12)),
       ],
     );
   }
@@ -869,20 +869,20 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
   Widget _buildHeartRateZone(String name, double percentage, Color color) {
     return Row(
       children: [
-        SizedBox(width: 40, child: Text(name, style: const TextStyle(color: Colors.white70, fontSize: 12))),
+        SizedBox(width: 40, child: Text(name, style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 12))),
         Expanded(
           child: ClipRRect(
             borderRadius: BorderRadius.circular(4),
             child: LinearProgressIndicator(
               value: percentage,
-              backgroundColor: Colors.white24,
+              backgroundColor: Colors.white.withOpacity(0.24),
               valueColor: AlwaysStoppedAnimation<Color>(color),
               minHeight: 8,
             ),
           ),
         ),
         const SizedBox(width: 12),
-        SizedBox(width: 50, child: Text('${(percentage * 100).toInt()}%', style: const TextStyle(color: Colors.white70, fontSize: 12, fontWeight: FontWeight.bold))),
+        SizedBox(width: 50, child: Text('${(percentage * 100).toInt()}%', style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 12, fontWeight: FontWeight.bold))),
       ],
     );
   }
@@ -890,21 +890,21 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
   Widget _buildInsightItem(String text) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 4),
-      child: Text(text, style: const TextStyle(color: Colors.white70)),
+      child: Text(text, style: TextStyle(color: Colors.white.withOpacity(0.7))),
     );
   }
 
   Widget _buildTrendItem(String date, double km, bool isPersonalBest, {bool isRest = false}) {
     return Row(
       children: [
-        SizedBox(width: 40, child: Text(date, style: const TextStyle(color: Colors.white50, fontSize: 12))),
+        SizedBox(width: 40, child: Text(date, style: TextStyle(color: Colors.white.withOpacity(0.5), fontSize: 12))),
         Expanded(
           child: Stack(
             children: [
               Container(
                 height: 8,
                 decoration: BoxDecoration(
-                  color: Colors.white10,
+                  color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(4),
                 ),
               ),
@@ -927,7 +927,7 @@ class _TeammateDetailPageState extends State<TeamMateDetailPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text('${km}km', style: const TextStyle(color: Colors.white70, fontSize: 12)),
+              Text('${km}km', style: TextStyle(color: Colors.white.withOpacity(0.7), fontSize: 12)),
               if (isPersonalBest) const SizedBox(width: 4),
               if (isPersonalBest) const Text('📍', style: TextStyle(fontSize: 12)),
             ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
-import 'pages/plan_page_v2.dart';
-import 'pages/team_page_v2.dart';
+import 'pages/plan_page_v2.dart' show PlanPage, CreatePlanWizard;
+import 'pages/team_page_v2.dart' show TeamPageV2, TeammateDetailPage;
 
 void main() {
   runApp(const TrekPioneerApp());
@@ -195,7 +195,7 @@ class _MainScreenState extends State<MainScreen> {
 
   final List<Widget> _pages = [
     const HomePage(),
-    const PlanPageV2(),
+    const PlanPage(),
     const TrackPage(),
     const TeamPageV2(),
     const ProfilePage(),
