@@ -1,5 +1,11 @@
 name: trek_pioneer
 description: "徒步先锋队 - 每一步，都算数"
+
+# 应用显示名称
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev

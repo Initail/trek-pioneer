@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../services/ai_coach_service.dart';
 import '../services/local_storage_service.dart';
 import '../models/plan.dart';
+import 'plan_detail_page.dart' show PlanDetailPage;
 
 /// 计划创建确认页面
 class PlanCreationPage extends StatefulWidget {

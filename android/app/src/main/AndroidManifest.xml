@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
     <application
+        android:label="徒步先锋队"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+    <application
         android:label="peakpal"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">

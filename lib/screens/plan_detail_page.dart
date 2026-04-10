@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/plan.dart';
 import '../services/local_storage_service.dart';
+import 'daily_checkin_page.dart' show DailyCheckInPage;
 
 /// 计划详情页 - 展示完整训练计划
 class PlanDetailPage extends StatefulWidget {
