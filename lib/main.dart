@@ -1,9 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'dart:math';
 import 'pages/plan_page_v2.dart' show PlanPage, CreatePlanWizard;
 import 'pages/team_page_v2.dart' show TeamPageV2, TeammateDetailPage;
+import 'screens/plan_creation_page.dart' show PlanCreationPage;
+import 'screens/plan_detail_page.dart' show PlanDetailPage;
+import 'screens/daily_checkin_page.dart' show DailyCheckInPage;
+import 'screens/progress_page.dart' show ProgressPage;
+import 'services/local_storage_service.dart';
 
-void main() {
+import 'services/local_storage_service.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  
+  // 初始化 Hive 数据库
+  await LocalStorageService().init();
+  
   runApp(const TrekPioneerApp());
 }
 
@@ -332,6 +345,36 @@ class HomePage extends StatelessWidget {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
                       child: const Text('查看今日任务', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  SizedBox(
+                    width: double.infinity,
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PlanCreationPage(
+                              goal: '冈仁波齐转山',
+                              challengeDate: DateTime(2026, 9, 15),
+                              weeklyDays: 5,
+                              sessionMinutes: 60,
+                              fitnessLevel: '入门',
+                              experience: '3-5 次',
+                              healthConditions: [],
+                            ),
+                          ),
+                        );
+                      },
+                      icon: const Icon(Icons.add_circle_outline),
+                      label: const Text('创建训练计划'),
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: const Color(0xFFFFD700),
+                        side: const BorderSide(color: Color(0xFFFFD700)),
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                      ),
                     ),
                   ),
                 ],
