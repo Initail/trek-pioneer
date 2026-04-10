@@ -350,7 +350,7 @@ class HomePage extends StatelessWidget {
                   const SizedBox(height: 12),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton.icon(
+                    child: ElevatedButton.icon(
                       onPressed: () {
                         Navigator.push(
                           context,
@@ -367,12 +367,12 @@ class HomePage extends StatelessWidget {
                           ),
                         );
                       },
-                      icon: const Icon(Icons.add_circle_outline),
-                      label: const Text('创建训练计划'),
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: const Color(0xFFFFD700),
-                        side: const BorderSide(color: Color(0xFFFFD700)),
-                        padding: const EdgeInsets.symmetric(vertical: 12),
+                      icon: const Icon(Icons.add_circle, size: 24),
+                      label: const Text('创建训练计划', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFFFD700),
+                        foregroundColor: const Color(0xFF1A1A2E),
+                        padding: const EdgeInsets.symmetric(vertical: 14),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
                     ),

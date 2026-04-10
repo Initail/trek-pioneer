@@ -271,7 +271,16 @@ class _PlanCreationPageState extends State<PlanCreationPage> {
         );
 
         // 跳转到计划详情页
-        // Navigator.pushReplacement(...)
+        Future.delayed(const Duration(milliseconds: 1500), () {
+          if (mounted) {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PlanDetailPage(planId: hivePlan.id),
+              ),
+            );
+          }
+        });
       }
     } catch (e) {
       if (mounted) {

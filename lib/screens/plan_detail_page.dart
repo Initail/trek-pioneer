@@ -182,9 +182,15 @@ class _PlanDetailPageState extends State<PlanDetailPage> {
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          // TODO: 跳转到打卡页面
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(content: Text('打卡功能开发中...')),
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DailyCheckInPage(
+                planId: _plan!.id,
+                week: _plan!.currentWeek,
+                day: 1,
+              ),
+            ),
           );
         },
         backgroundColor: const Color(0xFFFFD700),
